@@ -34,41 +34,62 @@ label{
   	box-shadow: 0 5px 10px rgb(154 160 185 / 5%), 0 15px 40px rgb(166 173 201 / 20%);
 }
 
-.wp-table tr:nth-child(odd) {
+#table tr:nth-child(odd) {
     background-color: #fff;
 }
 
-.wp-table tr:nth-child(even) {
+#table tr:nth-child(even) {
     background-color: #f1f1f1;
 }
 
-.wp-table tr {
+#table tr {
     border-bottom: 1px solid #ddd;
 }
 
-.wp-table th:first-child, 
-.wp-table td:first-child {
+#table th:first-child, 
+#table td:first-child {
     padding-left: 16px;
 }
 
 
-.wp-table td, 
-.wp-table th {
+#table td, 
+#table th {
     padding: 8px 8px;
     display: table-cell;
     text-align: left;
     vertical-align: top;
 }
 
-.wp-table th {
+#table th {
     font-weight: bold;
 }
  
-.wp-table {
+#table {
+    visibility: hidden;
     font-size: 13px!important;
     border: 1px solid #ccc;
     border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
     display: table;
+}
+
+td{
+    position: relative;
+    display: inline-block;
+}
+
+span{
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+td:hover span{
+  visibility: visible;
 }
