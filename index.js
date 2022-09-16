@@ -56,9 +56,19 @@ document.getElementById("filepicker").addEventListener("change", (event) => {
     let td3 = document.createElement('td');
     let span = document.createElement('span')
     td.textContent = arr1[x].replace(/\.[^/.]+$/, "");
+    for(let x in arr_in){
+      console.log(arr_in[x])
+      if(arr_in[x] == '00'){
+        arr_in[x] = 0;
+      }
+      else if(parseInt(arr_in[x]) < 10){
+        arr_in[x] = arr_in[x].replace('0', '');
+      }
+    }
+    console.log('ksdlfjsldfkj')
     td2.textContent = arr2[arr_in[x]];
     td3.textContent = "info";
-    span.textContent = `Type: ${arr3[x][0]}, Last modified date: ${arr3[x][1]}, Extension: ${arr3[x][2]}`;
+    span.textContent = `Type: ${arr3[arr_in[x]][0]}, Last modified date: ${arr3[arr_in[x]][1]}, Extension: ${arr3[arr_in[x]][2]}`;
     td3.appendChild(span);
     tr.append(td, td2, td3);
     table.appendChild(tr);
