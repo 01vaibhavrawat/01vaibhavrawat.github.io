@@ -68,7 +68,7 @@ document.getElementById("filepicker").addEventListener("change", (event) => {
     console.log('ksdlfjsldfkj')
     td2.textContent = arr2[arr_in[x]];
     td3.textContent = "info";
-    span.textContent = `Type: ${arr3[arr_in[x]][0]}, Last modified date: ${arr3[arr_in[x]][1]}, Extension: ${arr3[arr_in[x]][2]}`;
+    span.textContent = `Type: ${arr3[arr_in[x]][0]}, Last Modified Date: ${arr3[arr_in[x]][1]}, Extension: ${arr3[arr_in[x]][2]}`;
     td3.appendChild(span);
     tr.append(td, td2, td3);
     table.appendChild(tr);
