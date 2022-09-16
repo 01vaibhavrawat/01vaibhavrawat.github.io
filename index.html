@@ -12,7 +12,7 @@
     <div id="select_box">
       <p class="select">Click the below button to upload files.</p>
       <p><label for="filepicker" id="select_folder_button">Choose Folder</label></p>
-      <input style="visibility:hidden;" type="file" id="filepicker" name="fileList" webkitdirectory multiple />
+      <input style="visibility:hidden;" type="file" id="filepicker" (change)="getFile($event)" name="fileList" webkitdirectory multiple />
     </div>
   </div>
   <div>

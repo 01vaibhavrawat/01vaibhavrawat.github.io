@@ -85,11 +85,17 @@ span{
   background-color: black;
   color: #fff;
   text-align: center;
-  padding: 10px;
+  padding: px;
   border-radius: 6px;
   position: absolute;
   z-index: 1;
+  right: 100%;
+  top: 100%;
 }
 td:hover span{
   visibility: visible;
+}
+
+table tr td:nth-child(3){
+    cursor: pointer;
 }
