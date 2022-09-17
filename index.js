@@ -54,10 +54,9 @@ document.getElementById("filepicker").addEventListener("change", (event) => {
     let td = document.createElement('td');
     let td2 = document.createElement('td');
     let td3 = document.createElement('td');
-    let span = document.createElement('span')
+    let pre = document.createElement('pre')
     td.textContent = arr1[x].replace(/\.[^/.]+$/, "");
     for(let x in arr_in){
-      console.log(arr_in[x])
       if(arr_in[x] == '00'){
         arr_in[x] = 0;
       }
@@ -65,11 +64,14 @@ document.getElementById("filepicker").addEventListener("change", (event) => {
         arr_in[x] = arr_in[x].replace('0', '');
       }
     }
-    console.log('ksdlfjsldfkj')
     td2.textContent = arr2[arr_in[x]];
     td3.textContent = "info";
-    span.textContent = `Type: ${arr3[arr_in[x]][0]} || Last Modified Date: ${arr3[arr_in[x]][1]} || Extension: ${arr3[arr_in[x]][2]}`;
-    td3.appendChild(span);
+    let type = arr3[arr_in[x]][0] ? arr3[arr_in[x]][0] : 'NA';
+    pre.textContent = `Type: ${type}
+    Last Modified Date:
+    ${arr3[arr_in[x]][1]}
+    Extension: ${arr3[arr_in[x]][2]}`;
+    td3.appendChild(pre);
     tr.append(td, td2, td3);
     table.appendChild(tr);
   };
